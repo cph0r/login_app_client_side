@@ -14,23 +14,17 @@ function Router() {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <div>Home</div>
+          <div><h1 className='text-center'>DASHBOARD</h1></div>
         </Route>
         {loggedIn === false && (
           <>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
+            <Route path="/register"><Register /></Route>
+            <Route path="/login"><Login /></Route>
           </>
         )}
         {loggedIn === true && (
           <>
-            <Route path="/dashoard">
-              <Customers />
-            </Route>
+            <Route path="/dashoard"><Customers /></Route>
           </>
         )}
       </Switch>

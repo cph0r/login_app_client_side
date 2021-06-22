@@ -23,7 +23,7 @@ function Navbar() {
             )}
             {loggedIn === true && (
               <>
-                <li className="nav-item"><Link className="nav-link" to="/dashboard">Customers</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/dashboard">DashBoard</Link></li>
                 <LogOutBtn />
               </>
             )}      
