@@ -26,7 +26,7 @@ function Register() {
         "https://hreokuloginapp.herokuapp.com/auth/",
         registerData
       )
-      await getLoggedIn().
+      await getLoggedIn();
       history.push("/");
     } catch (err) {
       console.error(err);
