@@ -28,7 +28,7 @@ function Router() {
         )}
         {loggedIn === true && (
           <>
-            <Route path="/customer">
+            <Route path="/dashoard">
               <Customers />
             </Route>
           </>
