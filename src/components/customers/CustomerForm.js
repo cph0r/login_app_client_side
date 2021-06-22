@@ -24,16 +24,20 @@ function CustomerForm({ getCustomers }) {
 
   return (
     <div>
-      <form onSubmit={saveCustomer}>
-        <input
-          type="text"
-          placeholder="Customer name"
-          onChange={(e) => {
-            setCustomerName(e.target.value);
-          }}
-          value={customerName}
-        />
-        <button type="submit">Save new customer</button>
+      <h1>Create Customer</h1>
+      <form onSubmit={saveCustomer} className="mb-3 p-3">
+        <div className="mb-3 p-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Customer name"
+            onChange={(e) => {
+              setCustomerName(e.target.value);
+            }}
+            value={customerName}
+          />
+        </div>
+        <button className="btn btn-primary" type="submit">Save new customer</button>
       </form>
     </div>
   );

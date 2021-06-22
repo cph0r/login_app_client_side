@@ -17,7 +17,7 @@ function LogOutBtn() {
     history.push("/");
   }
 
-  return <button onClick={logOut}>Log out</button>;
+  return <button className="btn btn-outline-success" onClick={logOut}>Log out</button>;
 }
 
 export default LogOutBtn;

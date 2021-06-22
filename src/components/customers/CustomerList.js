@@ -3,13 +3,13 @@ import React from "react";
 function CustomerList({ customers }) {
   function renderCustomers() {
     return customers.map((customer, i) => {
-      return <li key={i}>{customer.name}</li>;
+      return <li className="list-group-item" key={i}>{customer.name}</li>
     });
   }
 
   return (
     <div>
-      <ul>{renderCustomers()}</ul>
+      <ul className="list-group">{renderCustomers()}</ul>
     </div>
   );
 }

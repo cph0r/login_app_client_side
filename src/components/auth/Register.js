@@ -36,26 +36,41 @@ function Register() {
   return (
     <div>
       <h1>Register a new account</h1>
-      <form onSubmit={register}>
-        <input
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
-        <input
-          type="password"
-          placeholder="Verify your password"
-          onChange={(e) => setPasswordVerify(e.target.value)}
-          value={passwordVerify}
-        />
-        <button type="submit">Register</button>
+      <form onSubmit={register} className="mb-3 p-3">
+        <div className="mb-3 p-3">
+          <label className="form-label">Email address</label>
+          <input
+            className="form-control"
+            type="email"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+          <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div className="mb-3 p-3">
+          <label for="exampleInputPassword1" className="form-label">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
+        </div>
+
+        <div className="mb-3 p-3">
+          <label className="form-label">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Verify your password"
+            onChange={(e) => setPasswordVerify(e.target.value)}
+            value={passwordVerify}
+          />
+        </div>
+        <button className="btn btn-primary" type="submit">Register</button>
       </form>
     </div>
   );
