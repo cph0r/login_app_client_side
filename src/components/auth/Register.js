@@ -25,8 +25,16 @@ function Register() {
       await axios.post(
         "https://hreokuloginapp.herokuapp.com/auth/",
         registerData
-      );
-      await getLoggedIn();
+      ).then(res => {
+        console.log(res);
+      }).catch(ex => {
+        console.log(ex);
+      });;
+      await getLoggedIn().then(res => {
+        console.log(res);
+      }).catch(ex => {
+        console.log(ex);
+      });;
       history.push("/");
     } catch (err) {
       console.error(err);
