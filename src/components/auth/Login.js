@@ -22,16 +22,8 @@ function Login() {
       // await axios.post("http://localhost:5000/auth/login", loginData);
       await axios.post(
         "https://hreokuloginapp.herokuapp.com/auth/login",loginData
-      ).then(res => {
-        console.log(res);
-      }).catch(ex => {
-        console.log(ex);
-      });
-      await getLoggedIn().then(res => {
-        console.log(res);
-      }).catch(ex => {
-        console.log(ex);
-      });;
+      );
+      await getLoggedIn();
       history.push("/");
     } catch (err) {
       console.error(err);

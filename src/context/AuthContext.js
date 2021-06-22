@@ -10,12 +10,8 @@ function AuthContextProvider(props) {
     // const loggedInRes = await axios.get("http://localhost:5000/auth/loggedIn");
     const loggedInRes = await axios.get(
       "https://hreokuloginapp.herokuapp.com/auth/loggedIn"
-    ).then(res => {
-      console.log(res);
-    }).catch(ex => {
-      console.log(ex);
-    });
-    
+    );
+
     setLoggedIn(loggedInRes.data);
   }
 
